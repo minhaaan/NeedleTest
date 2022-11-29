@@ -28,12 +28,12 @@ let dependencies: [TargetDependency] = [
 ]
 
 let project = Project(
-  name: "TuistProjectTemplate",
-  organizationName: "com.minan.TuistProjectTemplate",
+  name: "NeedleTest",
+  organizationName: "com.minan.NeedleTest",
   packages: [],
   settings: nil,
   targets: Project.makeAppTargets(
-    name: "TuistProjectTemplate",
+    name: "NeedleTest",
     dependencies: dependencies
   )
 )
