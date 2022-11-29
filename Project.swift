@@ -34,6 +34,7 @@ let project = Project(
   settings: nil,
   targets: Project.makeAppTargets(
     name: "NeedleTest",
-    dependencies: dependencies
+    dependencies: dependencies,
+    scripts: [.pre(script: "needle generate blblbl", name: "Needle Generate")]
   )
 )

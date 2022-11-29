@@ -9,7 +9,8 @@ extension Project {
   /// Helper function to create the Project for this ExampleApp
   public static func makeAppTargets(
     name: String,
-    dependencies: [TargetDependency]
+    dependencies: [TargetDependency],
+    scripts: [TargetScript]
   ) -> [Target] {
     let infoPlist: [String: InfoPlist.Value] = [
       "CFBundleShortVersionString": "1.0",
@@ -31,6 +32,7 @@ extension Project {
       infoPlist: .extendingDefault(with: infoPlist),
       sources: ["Targets/\(name)/Sources/**"],
       resources: ["Targets/\(name)/Resources/**"],
+      scripts: scripts,
       dependencies: dependencies,
       settings: .settings(base: baseSettings, configurations: [], defaultSettings: .recommended)
     )
