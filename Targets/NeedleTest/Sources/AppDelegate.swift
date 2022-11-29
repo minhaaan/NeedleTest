@@ -1,4 +1,5 @@
 import UIKit
+import NeedleFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,6 +11,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
   ) -> Bool {
     window = UIWindow(frame: UIScreen.main.bounds)
+    
+    registerProviderFactories()
+    
     let viewController = UIViewController()
     viewController.view.backgroundColor = .systemPurple
     window?.rootViewController = viewController
