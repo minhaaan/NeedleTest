@@ -35,6 +35,6 @@ let project = Project(
   targets: Project.makeAppTargets(
     name: "NeedleTest",
     dependencies: dependencies,
-    scripts: [.pre(script: "needle generate Targets/NeedleTest/Sources/NeedleGenerated.swift Targets/NeedleTest/Sources/", name: "Needle Generate")]
+    scripts: [.pre(script: "sh needle-generate.sh", name: "Needle Generate", basedOnDependencyAnalysis: false)]
   )
 )
