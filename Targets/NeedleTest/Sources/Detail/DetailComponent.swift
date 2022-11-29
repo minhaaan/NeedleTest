@@ -3,6 +3,7 @@ import NeedleFoundation
 
 protocol DetailDependency: Dependency {
   var userInfo: UserData { get }
+  var ageComponent: AgeComponent { get }
 }
 
 protocol DetailBuilder {
@@ -12,6 +13,6 @@ protocol DetailBuilder {
 final class DetailComponent: Component<DetailDependency>, DetailBuilder {
   
   var detailViewController: UIViewController {
-    return DetailViewController(userData: dependency.userInfo)
+    return DetailViewController(userData: dependency.userInfo, ageBuilder: dependency.ageComponent)
   }
 }

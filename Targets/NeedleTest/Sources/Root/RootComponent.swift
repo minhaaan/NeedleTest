@@ -8,6 +8,14 @@ final class RootComponent: BootstrapComponent {
     return shared { UserDataImpl() }
   }
   
+  var age: Age {
+    return shared { AgeImpl() }
+  }
+  
+  var ageComponent: AgeComponent {
+    return AgeComponent(parent: self)
+  }
+  
   var detailComponent: DetailComponent {
     return DetailComponent(parent: self)
   }
