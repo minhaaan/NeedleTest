@@ -14,9 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     registerProviderFactories()
     
-    let viewController = UIViewController()
-    viewController.view.backgroundColor = .systemPurple
-    window?.rootViewController = viewController
+    let component = RootComponent()
+    window?.rootViewController = component.viewController
     window?.makeKeyAndVisible()
     return true
   }
