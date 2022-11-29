@@ -24,6 +24,7 @@ import MyPlugin
 let localHelper = LocalHelper(name: "MyPlugin")
 
 let dependencies: [TargetDependency] = [
+  .external(name: "NeedleFoundation")
 ]
 
 let project = Project(
